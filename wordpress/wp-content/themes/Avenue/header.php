@@ -50,7 +50,7 @@ wp_head();
 		<span>Llámanos</span><br/>
 		<p><?php $my_phone =get_option('aven_my_phone'); echo $my_phone ?></p>
 		</div>
-		<a href="localhost:8888/contacto_form.html">
+		<a href="http://localhost:8888/wp-content/themes/avenue/contacto_form.html">
 		<div class="rmail">
 		<span>Correo</span><br/>
 		<p><?php $my_mail =get_option('aven_my_email'); echo $my_mail ?></p>
