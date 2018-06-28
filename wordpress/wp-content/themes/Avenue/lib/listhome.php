@@ -16,7 +16,7 @@ $wp_query->query('post_type=listings'.'&paged='.$paged);
 <?php  if( has_term( 'featured', 'type', $post->ID ) ) { ?>
 <span class="featspan">Featured</span>
 <?php } else if ( has_term( 'sold', 'type', $post->ID ) ){ ?>
-<span class="soldspan">Sold</span>
+<span class="soldspan">Vendido</span>
 <?php } else if ( has_term( 'reduced', 'type', $post->ID ) ){ ?>
 <span class="redspan">Reduced</span>
 <?php } ?>
@@ -33,10 +33,10 @@ $wp_query->query('post_type=listings'.'&paged='.$paged);
 		<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 	</div>
 	<div class="propmeta">
-	<div class="proplist"><span>Price</span> <span class="propval"> <?php $price=get_post_meta($post->ID, 'wtf_price', true); echo $price; ?></span></div>
-	<div class="proplist"><span>Location</span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'location', '', ' ', '' ); ?></span></div>
-	<div class="proplist"><span>Property type</span> <span class="propval"><?php echo get_the_term_list( $post->ID, 'property', '', ' ', '' ); ?></span></div>
-	<div class="proplist"><span>Area</span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'area', '', ' ', '' ); ?></span></div>
+	<div class="proplist"><span>Precio</span> <span class="propval"> <?php $price=get_post_meta($post->ID, 'wtf_price', true); echo $price; ?></span></div>
+	<div class="proplist"><span>Localidad</span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'location', '', ' ', '' ); ?></span></div>
+	<div class="proplist"><span>Tipo de propiedad</span> <span class="propval"><?php echo get_the_term_list( $post->ID, 'property', '', ' ', '' ); ?></span></div>
+	<div class="proplist"><span>Área</span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'area', '', ' ', '' ); ?></span></div>
 	</div>
 	<div class="entry">
 		<?php wpe_excerpt('wpe_excerptlength_archive', ''); ?>
