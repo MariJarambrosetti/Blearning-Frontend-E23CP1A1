@@ -11,12 +11,15 @@
 </div>
 
 <div class="propsmeta clearfix">
-	<div class="propslist"><span>Price - </span> <span class="propval"> <?php $price=get_post_meta($post->ID, 'wtf_price', true); echo $price; ?></span></div>
-	<div class="propslist"><span>Location - </span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'location', '', ' ', '' ); ?></span></div>
-	<div class="propslist"><span>Property - </span> <span class="propval"><?php echo get_the_term_list( $post->ID, 'property', '', ' ', '' ); ?></span></div>
-	<div class="propslist"><span>Bedrooms - </span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'bedrooms', '', ' ', '' ); ?></span></div>
-	<div class="propslist"><span>Bath - </span> <span class="propval"> <?php $bath=get_post_meta($post->ID, 'wtf_bath', true); echo $bath; ?></span></div>
-	<div class="propslist"><span>Garage - </span> <span class="propval"> <?php $garage=get_post_meta($post->ID, 'wtf_garage', true); echo $garage; ?></span></div>
+	<div class="propslist"><span>Precio - </span> <span class="propval"> <?php $price=get_post_meta($post->ID, 'wtf_price', true); echo $price; ?></span></div>
+	<div class="propslist"><span>Localidad - </span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'location', '', ' ', '' ); ?></span></div>
+	<div class="propslist"><span>Propiedad - </span> <span class="propval"><?php echo get_the_term_list( $post->ID, 'property', '', ' ', '' ); ?></span></div>
+	<div class="propslist"><span>Habitaciones - </span> <span class="propval"> <?php echo get_the_term_list( $post->ID, 'bedrooms', '', ' ', '' ); ?></span></div>
+	<div class="propslist"><span>Baños - </span> <span class="propval"> <?php $bath=get_post_meta($post->ID, 'wtf_bath', true); echo $bath; ?></span></div>
+	<div class="propslist"><span>Estcionamientos - </span> <span class="propval"> <?php $garage=get_post_meta($post->ID, 'wtf_garage', true); echo $garage; ?></span></div>
+	<div class="propslist"><span>Metros 2 - </span> <span class="propval"> <?php the_field('metros_cuadrados'); ?></span></div>
+	<div class="propslist"><span>Estacionamiento - </span> <span class="propval"> <?php the_field('estacionamiento'); ?></span></div>
+	<div class="propslist"><span>Brochure - </span> <span class="propval"> <?php $file = get_field('brochure_pdf_');?></span></div>
 </div>
 
 <div class="entry">

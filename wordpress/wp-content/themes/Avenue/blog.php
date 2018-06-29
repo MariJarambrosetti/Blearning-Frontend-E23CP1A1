@@ -33,7 +33,8 @@ if ( has_post_thumbnail() ) { ?>
 	<a href="<?php the_permalink() ?>"><img class="postimg" src="<?php bloginfo('stylesheet_directory'); ?>/timthumb.php?src=<?php get_image_url(); ?>&amp;h=150&amp;w=200&amp;zc=1" alt=""/></a>
 <?php } else { ?>
 	<a href="<?php the_permalink() ?>"><img class="postimg" src="<?php bloginfo('template_directory'); ?>/images/dummy.png" alt="" /></a>
-<?php } ?>
+<?php } ?>s
+
 <?php wpe_excerpt('wpe_excerptlength_index', ''); ?>
 <div class="clear"></div>
 </div>
